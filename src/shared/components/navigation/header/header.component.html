@@ -1,0 +1,28 @@
+<mat-toolbar>
+  <div class="menu-button" fxHide.gt-sm>
+    <button mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div>
+    <a class="logo" routerLink="/">
+      <img src="https://firebasestorage.googleapis.com/v0/b/meditateredding.appspot.com/o/lotus.png?alt=media&token=a6cf4772-c18b-4aff-92d3-0142ab7ac1c1" alt="logo" class="logo-icon">
+      <span class="logo-text">
+        OUR LOGO
+        <!-- <span class="logo-text-light">Redding</span> -->
+      </span></a>
+  </div>
+  <div class="navlinks">
+    <ul class="navigation-items">
+      <li>
+        <a routerLink="/configure">Configure</a>
+      </li>
+      <li>
+        <a routerLink="/retreats">Link2</a>
+      </li>
+      <li>
+        <a routerLink="/retreats">Link3</a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>

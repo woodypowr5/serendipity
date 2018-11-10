@@ -1,0 +1,42 @@
+footer{
+    height: 87px;
+    background-color:rgba(72, 71, 69, 0.20); 
+    position: relative;
+}
+
+.footer-attribution{
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    right: 25px;
+    top: 17px;
+    color: #666;
+}
+
+.footer-coffee{
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+    right: 25px;
+    top: 47px;
+    color: #666;
+    text-decoration: underline;
+}
+@media (max-width: 1000px) {
+    footer{
+        height: 110px;
+    }
+    .footer-attribution,
+    .footer-coffee{
+        position: relative;
+        text-align: center;
+        width: 100%;
+        margin-left: 22px;
+    }
+    .footer-coffee{
+        /* margin-bottom: 20px; */
+        line-height: 0px;
+    }
+} 
