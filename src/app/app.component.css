@@ -10,7 +10,7 @@ mat-sidenav-container, mat-sidenav-content, mat-sidenav {
     padding: 0px;
     overflow: hidden;
     position: relative;
-    min-height: 700px;
+    min-height: 700px; 
   }
   
   .loading-container{

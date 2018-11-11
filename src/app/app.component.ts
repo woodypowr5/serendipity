@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   private showLoadingIndicator = true;
+  private current
 
   constructor(private router: Router) {
     this.router.events.subscribe((routerEvent) => {

@@ -33,24 +33,24 @@ li{
 }
 
 mat-toolbar{
-  height: 55px;
-  background-color:rgba(255, 255, 255, 0.67);
+  height: 180px;
+  background-color:rgba(255, 255, 255, 1);
   -webkit-transition: height 0.3s,background-color 0.3s;
   transition: height 0.3s,background-color 0.3s;
 }
 
-mat-toolbar:hover{
+/* mat-toolbar:hover{
   background-color:rgba(255, 255, 255, 0.95);
   height: 110px;
   line-height: 100px;
-}
-mat-toolbar:hover a{
+} */
+/* mat-toolbar:hover a{
   margin-right:15px;
   margin-left: 15px;
-}
-mat-toolbar:hover navlinks{
+} */
+/* mat-toolbar:hover navlinks{
   height: 100%;
-}
+} */
 .navigation-items {
   list-style: none;
   padding: 0;
