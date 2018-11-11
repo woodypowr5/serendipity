@@ -1,19 +1,75 @@
-<div style="height: 400px">
+<div class="configured-image-container"
+  [style.width]="svgAttributes.containerWidth + 'px'"
+>
+  <form class="embosser-form" *ngIf="embosserActive === true">
+    <mat-form-field class="embosser-input">
+      <input matInput placeholder="Enter your text:" value="Enter your text">
+    </mat-form-field>
+  </form>
   <svg 
       xmlns="http://www.w3.org/2000/svg" 
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      height="400"
-      width="100%"
+      [attr.width]="svgAttributes.containerWidth"
+      [attr.height]="svgAttributes.containerHeight"
     >
       <rect 
-          x="103" 
+          x="78" 
           y="48" 
-          style="fill:none;"
+          [ngClass]="{'inner-material-leather': svgAttributes.innerMaterial === 'leather'}"
+          [attr.fill]="svgAttributes.fill"
           [attr.stroke]="svgAttributes.color"
           [attr.stroke-width]="svgAttributes.bezelWidth"
           [attr.rx]="svgAttributes.radius"
           id="e1_rectangle" 
           [attr.width]="svgAttributes.width" 
-          [attr.height]="svgAttributes.height"/>
+          [attr.height]="svgAttributes.height"
+          [attr.background-image]="svgAttributes.backgroundImage"/>
+        <rect 
+          x="263" 
+          y="48" 
+          *ngIf="svgAttributes.style ==='bookcase'"
+          [ngClass]="{'inner-material-leather': svgAttributes.innerMaterial === 'leather'}"
+          [attr.fill]="svgAttributes.fill"
+          [attr.stroke]="svgAttributes.color"
+          [attr.stroke-width]="svgAttributes.bezelWidth"
+          [attr.rx]="svgAttributes.radius"
+          id="left_flap" 
+          [attr.width]="svgAttributes.width" 
+          [attr.height]="svgAttributes.height"
+          [attr.background-image]="svgAttributes.backgroundImage"/>
+        <rect 
+          x="103" 
+          y="98" 
+          *ngIf="svgAttributes.ccPockets === 'yes' && svgAttributes.style ==='bookcase'"
+          [ngClass]="{'inner-material-leather': svgAttributes.innerMaterial === 'leather'}"
+          fill="none"
+          stroke="black"
+          stroke-width="3px"
+          id="cc_pockets" 
+          width="100"
+          height="2"/> 
+        <rect 
+          x="103" 
+          y="138" 
+          *ngIf="svgAttributes.ccPockets === 'yes' && svgAttributes.style ==='bookcase'"
+          [ngClass]="{'inner-material-leather': svgAttributes.innerMaterial === 'leather'}"
+          fill="none"
+          stroke="black"
+          stroke-width="3px"
+          id="cc_pockets" 
+          width="100"
+          height="2"/> 
+        <rect 
+          x="103" 
+          y="178" 
+          *ngIf="svgAttributes.ccPockets === 'yes' &&  svgAttributes.style ==='bookcase'"
+          [ngClass]="{'inner-material-leather': svgAttributes.innerMaterial === 'leather'}"
+          fill="none"
+          stroke="black"
+          stroke-width="3px"
+          id="cc_pockets" 
+          width="100"
+          height="2"/>                 
+        <!-- <text x="20" y="35" class="small">{{ embosserText }}</text>    -->
   </svg>
 </div>

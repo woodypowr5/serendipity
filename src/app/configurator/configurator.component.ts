@@ -55,11 +55,21 @@ export class ConfiguratorComponent implements OnInit {
     this.activeAttribute = attribute;
     this.activeOption.name = this.getSelectionValue(attribute.name);
     this.imageSrc = this.imageService.getImage(this.selections);
-    this.child.selectionsChanged(this.selections);
+    // this.child.selectionsChanged(this.selections);
   }
 
   setActiveOption(option: Option): void {
     this.activeOption = option;
     this.setSelections(this.activeAttribute, option);
+  }
+
+  next() {
+    for (let i = 0; i < this.attributes.length; i++) {
+      const attribute = this.attributes[i];
+      if (attribute.name === this.activeAttribute.name) {
+        this.activeAttribute = this.attributes[i + 1];
+        break; 
+      }
+    }
   }
 }

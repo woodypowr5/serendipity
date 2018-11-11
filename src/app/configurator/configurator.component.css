@@ -1,16 +1,125 @@
 .configurator-container{
-    position: fixed;
-    width: 100vw;
+    position: absolute;
+    width: 100%;
     height: 100vh;
     top: 0px;
-}
-.active{
-    background-color: #AAA;
-}
-.progress-section{
-    margin-top: 40px; 
-}
-.image-section{
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
+    overflow-y: scroll;
+    display: flex;
+}   
+    .next-button{
+        position: absolute;
+        background-color: white;
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+        font-family: 'Raleway';
+        left: 165px;
+        bottom: 40px;
+        border: 4px solid #658DA6;
+        color:  #658DA6;
+        font-weight: bold;
+        box-shadow: none;
+        border-radius: 5px;
+    }   
+    .image-section{
+         flex-grow: 2;
+    }
+        .header-container{
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 50px;
+            text-align: center;
+            box-shadow: none !important;
+        }
+        .header-container mat-card-title{
+            font-family: 'Raleway';
+            font-size: 32px;
+        }
+        .header-container mat-card-subtitle{
+            font-family: 'Raleway';
+            font-size: 18px;
+        }
+
+        .active{
+            background-color: #DDD;
+        }
+    .options-section{
+        
+    }
+        .option{
+            width: 160px;
+            height: 160px;
+            display: block;
+            border-top: 7px solid #AAA;
+            border-left: 7px solid #AAA;
+            border-right: 7px solid #AAA;
+            box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+            font-size: 16px;
+            font-family: 'Raleway';
+        }
+        .option:last-child{
+             border-bottom: 7px solid #AAA;
+        }
+    .progress-section{
+        position:fixed;
+        left: 165px; 
+        bottom: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        height: 120px;  
+    }
+        .progress-indicator{
+            font-size: 16px;
+            font-family: 'Raleway';
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 10px;
+            border-top: 5px solid #AAA;
+            border-left: 5px solid #AAA;
+            border-bottom: 5px solid #AAA;            
+        }
+        .progress-indicator:last-child{
+            border-right: 5px solid #AAA;
+        }
+      
+        /* exterior material
+            carbon
+            leather
+            crocodile
+            ostrich
+            cobra
+
+        interior material
+            fabric
+            carbon
+            leather
+            crocodile
+            ostrich
+            cobra
+
+        credit card pockets
+            Yes 
+            No
+
+        stiching
+            Yes
+            No 
+
+        embossing
+            Yes
+            No
+        
+        closure
+            clip
+            magnetic
+            zip
+
+        device
+            iPhone 
+            Android
+            iPad 
+
+        style: 
+            bookcase
+            back cover only  */

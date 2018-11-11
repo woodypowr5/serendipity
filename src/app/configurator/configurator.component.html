@@ -1,36 +1,37 @@
-<mat-card class="configurator-container">
-  <mat-card-title>
-    Configure Your Case
-  </mat-card-title>
-  <mat-card-subtitle>
-    Select from the options below to select your options:
-    {{ selections | json }}
-  </mat-card-subtitle>
-  <mat-card-content>
-    <section class="progress-section">
-      <button 
-        mat-raised-button
-        *ngFor="let attribute of attributes"
-        [ngClass]="{'active': activeAttribute.name === attribute.name}"
-        (click)="setActiveAttribute(attribute)"
-        >
-        {{ attribute.name }}
-      </button>
-    </section>
-    <section class="image-section">
-      <mat-card>
-        <app-configured-image></app-configured-image>
-      </mat-card>
-    </section>
-    <section class="options-section">
-      <button 
-        mat-raised-button
-        *ngFor="let option of activeAttribute.options"
-        [ngClass]="{'active': activeOption.name === option.name}"
-        (click)="setActiveOption(option)"
-        >
-        {{ option.name }}
-      </button>
-    </section>
-  </mat-card-content>
-</mat-card>
+<div class="configurator-container">
+  <section class="options-section">
+    <button 
+      mat-raised-button
+      class="option"
+      *ngFor="let option of activeAttribute.options"
+      [ngClass]="{'active': activeOption.name === option.name}"
+      (click)="setActiveOption(option)"
+      >
+      {{ option.display }}
+      
+    </button>
+  </section>
+  <section class="image-section">
+      <mat-card class="header-container">
+          <mat-card-title>
+            Configure Your Case
+          </mat-card-title>
+          <mat-card-subtitle>
+            Select from the options below to customize:
+          </mat-card-subtitle>
+        </mat-card>
+      <app-configured-image></app-configured-image>
+  </section>
+</div>
+<button class="next-button" mat-raised-button (click)="next()">Next</button>
+<section class="progress-section">
+    <button 
+      mat-raised-button
+      class="progress-indicator"
+      *ngFor="let attribute of attributes"
+      [ngClass]="{'active': activeAttribute.name === attribute.name}"
+      (click)="setActiveAttribute(attribute)"
+      >
+      {{ attribute.display }}
+    </button>
+  </section>

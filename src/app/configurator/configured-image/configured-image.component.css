@@ -1,0 +1,12 @@
+.inner-material-leather{
+    background: url("/assets/leather3.png");
+    background-size: cover;
+}
+.configured-image-container{
+    width:auto;
+    margin: 0 auto;
+}
+svg{
+    margin: 0 auto;
+    margin-top: 50px;
+}

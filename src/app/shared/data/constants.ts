@@ -1,78 +1,193 @@
 export const Constants = {
     "attributes": [    
         {
-            "name": "material",
+            "name": "device",
+            "display": "Device Type",
             "options": [
                 {
-                    "name": "leather"
+                    "name": "iPhone",
+                    "display": "iPhone"
                 },
                 {
-                    "name": "plastic"
+                    "name": "Android",
+                    "display": "Android"
                 },
                 {
-                    "name": "metal"
+                    "name": "iPad",
+                    "display": "iPad"
+                }
+            ]   
+        },
+        {
+            "name": "style",
+            "display": "Flipout Style",
+            "options": [
+                {
+                    "name": "backCover",
+                    "display": "Back Cover Only"
                 },
                 {
-                    "name": "wood"
+                    "name": "bookcase",
+                    "display": "Bookcase Style"
+                }
+            ]   
+        },
+        {
+            "name": "material",
+            "display": "Inside Material",
+            "options": [
+                {
+                    "name": "leather",
+                    "display": "Leather" 
+                },
+                {
+                    "name": "crocodile",
+                    "display": "Crocodile"
+                },
+                {
+                    "name": "carbon",
+                    "display": "Carbon Fiber"
+                },
+                {
+                    "name": "hippo",
+                    "display": "Hippo"
+                }
+            ]   
+        },
+        {
+            "name": "outerMaterial",
+            "display": "Outside Material",
+            "options": [
+                {
+                    "name": "leather",
+                    "display": "Leather" 
+                },
+                {
+                    "name": "crocodile",
+                    "display": "Crocodile"
+                },
+                {
+                    "name": "carbon",
+                    "display": "Carbon Fiber"
+                },
+                {
+                    "name": "hippo",
+                    "display": "Hippo"
                 }
             ]   
         },
         {
             "name": "color",
+            "display": "Material Color",
             "options": [
                 {
-                    "name": "red"
+                    "name": "white",
+                    "display": "White"
                 },
                 {
-                    "name": "black"
+                    "name": "brown",
+                    "display": "Brown"
                 },
                 {
-                    "name": "yello"
+                    "name": "green",
+                    "display": "Green"
                 },
                 {
-                    "name": "blue"
+                    "name": "tan",
+                    "display": "Tan"
+                },
+                {
+                    "name": "gold",
+                    "display": "Gold"
                 }, 
                 {
-                    "name": "green"
+                    "name": "white",
+                    "display": "White"
                 },
-                {
-                    "name": "white"
-                },
-            ]   
-        },
-        {
-            "name": "device",
-            "options": [
-                {
-                    "name": "iPhone"
-                },
-                {
-                    "name": "Android"
-                },
-                {
-                    "name": "Google Pixel"
-                }
             ]   
         },
         {
             "name": "bezelWidth",
+            "display": "Bezel Width",
             "options": [
                 {
-                    "name": "none"
+                    "name": "none",
+                    "display": "None"
                 },
                 {
-                    "name": "2mm"
+                    "name": "2mm",
+                    "display": "2mm"
                 },
                 {
-                    "name": "4mm"
+                    "name": "4mm",
+                    "display": "4mm"
                 },
                 {
-                    "name": "6mm"
+                    "name": "6mm",
+                    "display": "6mm"
                 }, 
                 {
-                    "name": "8mm"
+                    "name": "8mm",
+                    "display": "8mm"
                 },
             ]   
-        }
+        },
+        {
+            "name": "ccPockets",
+            "display": "Credit Card Pockets",
+            "options": [
+                {
+                    "name": "no",
+                    "display": "No"
+                },
+                {
+                    "name": "yes",
+                    "display": "Yes"
+                }
+            ]   
+        },
+        {
+            "name": "closure",
+            "display": "Closure",         
+            "options": [
+                {
+                    "name": "no",
+                    "display": "No"
+                },
+                {
+                    "name": "yes",
+                    "display": "Yes"
+                }
+            ]   
+        },
+        {
+            "name": "embossing",
+            "display": "Custom Embossing",
+            "options": [
+                {
+                    "name": "no",
+                    "display": "No"
+                },
+                {
+                    "name": "yes",
+                    "display": "Yes"
+                }
+            ]   
+        },
+        {
+            "name": "stiching",
+            "display": "Stiching Color",
+            "options": [
+                {
+                    "name": "red",
+                    "display": "Red"
+                },
+                {
+                    "name": "black",
+                    "display": "Black"
+                }
+            ]   
+        },
+
     ]    
 }

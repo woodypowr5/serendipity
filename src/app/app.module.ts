@@ -17,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AttributeService } from './shared/services/attribute.service';
 import { ImageService } from './shared/services/image.service';
 import { ConfiguredImageComponent } from './configurator/configured-image/configured-image.component';
-
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -38,6 +38,7 @@ import { ConfiguredImageComponent } from './configurator/configured-image/config
     MatIconModule,
     MatToolbarModule,
     MatCardModule,
+    MatInputModule,
     AppRoutingModule 
   ],
   providers: [AttributeService, ImageService],
