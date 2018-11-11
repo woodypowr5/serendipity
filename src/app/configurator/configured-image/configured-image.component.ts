@@ -53,6 +53,13 @@ export class ConfiguredImageComponent implements OnInit {
           this.svgAttributes.bezelWidth = "8px";
         } 
       }
+      else if (name === 'device') {
+        if (value === 'iPhone') {
+          this.svgAttributes.radius = "15px";
+        } else if (value === 'Android') {
+          this.svgAttributes.radius = "0px";
+        } 
+      }
     });
   }
 

@@ -1,0 +1,15 @@
+.welcome-section{
+    position: relative;
+}   
+.home-content{
+    width: 100%;
+}
+button.customize{
+    position: absolute;
+    top: 210px;
+    width: 600px;
+    height: 60px;
+    margin-left: -300px;
+    left: 50%;
+    background-color: white;
+}

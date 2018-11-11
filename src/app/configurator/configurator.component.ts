@@ -38,7 +38,7 @@ export class ConfiguratorComponent implements OnInit {
     }); 
   }
 
-  setSelection(attribute: Attribute, option: Option) {
+  setSelections(attribute: Attribute, option: Option) {
     this.selections.map(selection => {
       if (selection.attributeName === attribute.name) {
         selection.value = option.name;
@@ -48,32 +48,18 @@ export class ConfiguratorComponent implements OnInit {
   }
 
   getSelectionValue(attributeName: string) {
-    const test = this.selections.filter(selection => selection.attributeName === attributeName);
-    return test[0].value;
+   return this.selections.filter(selection => selection.attributeName === attributeName)[0].value;
   }
 
   setActiveAttribute(attribute: Attribute): void {
     this.activeAttribute = attribute;
     this.activeOption.name = this.getSelectionValue(attribute.name);
     this.imageSrc = this.imageService.getImage(this.selections);
+    this.child.selectionsChanged(this.selections);
   }
 
   setActiveOption(option: Option): void {
     this.activeOption = option;
-    this.setSelection(this.activeAttribute, option);
+    this.setSelections(this.activeAttribute, option);
   }
 }
-
-
-// @Component({
-//   selector: 'some-cmp',
-//   template: '<child-cmp></child-cmp>',
-//   directives: [ChildCmp]
-// })
-// class SomeCmp {
-//   @ViewChild(ChildCmp) child:ChildCmp;
-//   ngAfterViewInit() {
-//     // child is set
-//     this.child.doSomething();
-//   }
-// }

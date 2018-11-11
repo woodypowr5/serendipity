@@ -4,6 +4,7 @@
   </mat-card-title>
   <mat-card-subtitle>
     Select from the options below to select your options:
+    {{ selections | json }}
   </mat-card-subtitle>
   <mat-card-content>
     <section class="progress-section">
@@ -18,10 +19,7 @@
     </section>
     <section class="image-section">
       <mat-card>
-        <app-configured-image
-        
-        >
-        </app-configured-image>
+        <app-configured-image></app-configured-image>
       </mat-card>
     </section>
     <section class="options-section">
@@ -32,7 +30,7 @@
         (click)="setActiveOption(option)"
         >
         {{ option.name }}
-      </button>s
+      </button>
     </section>
   </mat-card-content>
 </mat-card>
